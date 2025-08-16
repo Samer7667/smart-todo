@@ -366,6 +366,22 @@ html[dir="ltr"] .lang-icon {
     .task-item {
       animation: fadeIn 0.3s ease forwards;
     }
+    /* تنسيق الصورة الدائرية في الفوتر */
+.circular-logo {
+  width: 60px;                   /* حجم الصورة */
+  height: 60px;                  /* يجعلها مربعة لتصبح دائرة */
+  border-radius: 50%;            /* شكل دائري */
+  object-fit: cover;             /* تضمن أن الصورة تملأ الدائرة دون تشويه */
+  border: 2px solid #e0e5ff;     /* إطار خفيف حول الصورة */
+  box-shadow: 0 4px 8px rgba(74, 107, 255, 0.1); /* ظل ناعم */
+  transition: all 0.3s ease;     /* تأثير حركة سلس */
+}
+
+/* تأثير عند التحويم */
+.circular-logo:hover {
+  transform: scale(1.05);        /* تكبير بسيط */
+  box-shadow: 0 6px 12px rgba(74, 107, 255, 0.15); /* ظل أعمق */
+}
   </style>
 </head>
 <body>
@@ -422,7 +438,7 @@ html[dir="ltr"] .lang-icon {
   </div>
 
   <footer>
-    <img src="logo.png" alt="حقوق النشر" class="footer-logo">
+    <img src="logo.png" alt="حقوق النشر" class="footer-logo circular-logo">
     <div class="copyright">
       <span data-i18n="copyright">جميع الحقوق محفوظة &copy;</span>
       <span id="current-year"></span>
