@@ -113,13 +113,17 @@
       box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.2);
     }
 
-    .lang-icon {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translateY(-50%);
-      pointer-events: none;
-    }
+    /* السهم في الوضع RTL (العربية) */
+html[dir="rtl"] .lang-icon {
+  left: 10px;
+  right: auto;
+}
+
+/* السهم في الوضع LTR (الإنجليزية وغيرها) */
+html[dir="ltr"] .lang-icon {
+  right: 10px;
+  left: auto;
+}
 
     .task-form {
       background-color: var(--card-bg);
