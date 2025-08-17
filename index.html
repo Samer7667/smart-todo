@@ -3,14 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="تطبيق قائمة مهام ذكية لإدارة المهام اليومية">
-  <title>قائمة مهامي الذكية</title>
+  <meta name="description" content="تطبيق قائمة مهام ذكية لإدارة المهام اليومية بسهولة وكفاءة">
+  
+  <!-- Primary Meta Tags -->
+  <title>قائمة مهامي الذكية - نظم مهامك اليومية بذكاء</title>
+  <meta name="title" content="قائمة مهامي الذكية - نظم مهامك اليومية بذكاء">
+  <meta name="keywords" content="قائمة مهام, تطبيق مهام, إدارة المهام, تنظيم الوقت, تطبيق إنتاجية">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="logo-checkmark.png" type="image/png">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/todo-app/">
+  <meta property="og:title" content="قائمة مهامي الذكية - نظم مهامك اليومية بذكاء">
+  <meta property="og:description" content="تطبيق قائمة مهام ذكية لإدارة المهام اليومية بسهولة وكفاءة">
+  <meta property="og:image" content="https://example.com/todo-app/logo-checkmark.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://example.com/todo-app/">
+  <meta property="twitter:title" content="قائمة مهامي الذكية - نظم مهامك اليومية بذكاء">
+  <meta property="twitter:description" content="تطبيق قائمة مهام ذكية لإدارة المهام اليومية بسهولة وكفاءة">
+  <meta property="twitter:image" content="https://example.com/todo-app/logo-checkmark.png">
+  
   <style>
     :root {
       --primary: #4a6bff;
       --primary-light: #6a85ff;
       --primary-dark: #3a5bef;
-      --background: #ffffff; /* تغيير الخلفية إلى أبيض */
+      --background: #ffffff;
       --card-bg: #ffffff;
       --text: #333333;
       --text-light: #666666;
@@ -113,17 +135,15 @@
       box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.2);
     }
 
-    /* السهم في الوضع RTL (العربية) */
-html[dir="rtl"] .lang-icon {
-  left: 10px;
-  right: auto;
-}
+    html[dir="rtl"] .lang-icon {
+      left: 10px;
+      right: auto;
+    }
 
-/* السهم في الوضع LTR (الإنجليزية وغيرها) */
-html[dir="ltr"] .lang-icon {
-  right: 10px;
-  left: auto;
-}
+    html[dir="ltr"] .lang-icon {
+      right: 10px;
+      left: auto;
+    }
 
     .task-form {
       background-color: var(--card-bg);
@@ -306,9 +326,18 @@ html[dir="ltr"] .lang-icon {
     }
 
     .footer-logo {
-      width: 80px;
-      height: auto;
-      object-fit: contain;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      box-shadow: 0 4px 8px rgba(74, 107, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .footer-logo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(74, 107, 255, 0.15);
     }
 
     .copyright {
@@ -366,29 +395,13 @@ html[dir="ltr"] .lang-icon {
     .task-item {
       animation: fadeIn 0.3s ease forwards;
     }
-    /* تنسيق الصورة الدائرية في الفوتر */
-.circular-logo {
-  width: 60px;                   /* حجم الصورة */
-  height: 60px;                  /* يجعلها مربعة لتصبح دائرة */
-  border-radius: 50%;            /* شكل دائري */
-  object-fit: cover;             /* تضمن أن الصورة تملأ الدائرة دون تشويه */
-  border: 2px solid #e0e5ff;     /* إطار خفيف حول الصورة */
-  box-shadow: 0 4px 8px rgba(74, 107, 255, 0.1); /* ظل ناعم */
-  transition: all 0.3s ease;     /* تأثير حركة سلس */
-}
-
-/* تأثير عند التحويم */
-.circular-logo:hover {
-  transform: scale(1.05);        /* تكبير بسيط */
-  box-shadow: 0 6px 12px rgba(74, 107, 255, 0.15); /* ظل أعمق */
-}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="logo">
-        <img src="logo-checkmark.png" alt="شعار التطبيق">
+        <img src="logo-checkmark.png" alt="شعار تطبيق قائمة المهام الذكية">
         <h1 data-i18n="app_title">قائمة مهامي الذكية</h1>
       </div>
 
@@ -438,7 +451,7 @@ html[dir="ltr"] .lang-icon {
   </div>
 
   <footer>
-    <img src="logo.png" alt="حقوق النشر" class="footer-logo circular-logo">
+    <img src="logo.png" alt="شعار قائمة المهام الذكية" class="footer-logo">
     <div class="copyright">
       <span data-i18n="copyright">جميع الحقوق محفوظة &copy;</span>
       <span id="current-year"></span>
